@@ -37,8 +37,8 @@ jobs:
       - name: Build site
         run: |
           set -euxo pipefail
+          pwd
           ls -la
-          ls -la luis.santosburgoa-site
           zola build --base-url "${{ steps.pages.outputs.base_url }}"
         working-directory: ./luis.santosburgoa-site
 
