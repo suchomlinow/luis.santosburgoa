@@ -31,7 +31,8 @@ jobs:
       - name: Build site
         run: |
           set -euxo pipefail
-          zola build --config zola.toml --base-url "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
+          cp zola.toml config.toml
+          zola build --base-url "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
         working-directory: ./luis.santosburgoa-site
 
       - name: Deploy to gh-pages
