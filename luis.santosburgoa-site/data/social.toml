@@ -1,0 +1,14 @@
+[[social]]
+name = "Email"
+url = "mailto:lsantosb@uchicago.edu"
+icon = "fas fa-envelope"
+
+[[social]]
+name = "LinkedIn"
+url = "https://www.linkedin.com/in/luis-santos-burgoa/"
+icon = "fab fa-linkedin"
+
+[[social]]
+name = "GitHub"
+url = "https://github.com/suchomlinow"
+icon = "fab fa-github"

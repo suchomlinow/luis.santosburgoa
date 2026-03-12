@@ -1,0 +1,52 @@
+# The URL the site will be built for
+base_url = "https://markscout.xyz"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# The site title and description; they are used in feeds by default.
+title = "Mark S"
+description = "Professional Portfolio"
+
+[extra]
+# Put all your custom variables here
+# The URL of the CV, which can be downloaded from the landing page
+cv_url = "https://en.wikipedia.org/wiki/Severance_(TV_series)"
+# Personal information
+name = "Mark S"
+role = "Macrodata Refiner"
+organization = "Lumon Industries"
+location = "Kier, PE"
+
+# Bio/about section, this is prominently displayed on the landing page
+bio = """
+Hi, I’m Mark Scout. By day—or at least, what feels like day—I work as a Macrodata Refinement department head at Lumon Industries. I’ve undergone the severance procedure, which means my work self and personal self are completely separate. I can’t tell you much about what I do outside the office, because I don’t know. What I do know is that I take pride in leading my team and hitting quota, even if I don’t fully understand what our data means. People say I’m dependable, maybe a little reserved, but I try to keep things running smoothly. Lately, though, I’ve started asking questions—about the work, the rules, and what it really means to be "me."
+"""
+
+# navbar items
+[[extra.menu]]
+name = "Publications"
+url = "/publications/"
+weight = 1
+
+[[extra.menu]]
+name = "Conferences & Talks"
+url = "/conferences/"
+weight = 2
+
+[[extra.menu]]
+name = "Experience"
+url = "/experience/"
+weight = 3
+
+# Color theme configuration
+[extra.colors]
+primary_color = "#39444C"         
+secondary_color = "#C8102E"       
+accent_color = "#98A6AD"         
+text_color = "#2C2F33"           
+background_color = "#F8F9FA"      
+card_background = "#FFFFFF"      
+border_color = "#D0D3D4"        
+light_background = "#EDF0F2"      
+

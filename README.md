@@ -13,7 +13,7 @@ Now at UChicago, I am expanding that foundation with data, and policy analytics 
 
 ## What I'm focused on now
 
-- Analizing public transporation data in the City of Chicago.
+- Analizing public transportation data in the City of Chicago.
 - Working on the improvements of communications on central banking for the Bank of Mexico.
 
 ## Tools I use

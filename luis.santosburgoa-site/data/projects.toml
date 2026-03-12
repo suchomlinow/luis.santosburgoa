@@ -1,0 +1,9 @@
+[[project]]
+title = "Bus vs. Rideshare: What's the Best Way for the UChicago Community to Get Downtown?"
+subtitle = "Comparative analysis of CTA bus routes 2 and 6 versus Uber/Lyft between Hyde Park and Downtown Chicago"
+year = 2026
+description = "Interactive transportation dashboard analyzing travel time reliability, variability, shocks, and cost-time tradeoffs for bus and rideshare options."
+tags = ["Transportation", "Policy Analytics", "Dash", "Plotly", "Chicago"]
+links = [
+  { name = "Repository", url = "https://github.com/uchicago-2026-capp30122/project-ljs" }
+]

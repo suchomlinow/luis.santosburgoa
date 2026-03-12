@@ -1,0 +1,217 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="section-template">
+    <div class="container">
+        <div class="section-header projects-header">
+            <h1>{{ section.title }}</h1>
+            {% if section.description %}
+            <p>{{ section.description }}</p>
+            {% endif %}
+        </div>
+
+        {% set projects_data = load_data(path="data/projects.toml") %}
+
+        <div class="projects-grid">
+            {% for project in projects_data.project | sort(attribute="year") | reverse %}
+            <article class="project-card">
+                <div class="project-top">
+                    <div class="project-year">{{ project.year | default(value="") }}</div>
+                    {% if project.tags %}
+                    <div class="project-tags">
+                        {% for tag in project.tags %}
+                        <span class="project-tag">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+
+                <h3 class="project-title">{{ project.title }}</h3>
+                {% if project.subtitle %}
+                <p class="project-subtitle">{{ project.subtitle }}</p>
+                {% endif %}
+
+                {% if project.description %}
+                <p class="project-description">{{ project.description }}</p>
+                {% endif %}
+
+                {% if project.links %}
+                <footer class="project-links">
+                    {% for link in project.links %}
+                    <a href="{{ link.url }}" class="project-link-btn" target="_blank" rel="noopener noreferrer">{{ link.name }} ↗</a>
+                    {% endfor %}
+                </footer>
+                {% endif %}
+            </article>
+            {% endfor %}
+        </div>
+
+        {% if section.content %}
+        <article class="project-details prose">
+            {{ section.content | safe }}
+        </article>
+        {% endif %}
+    </div>
+</div>
+
+<style>
+.projects-header {
+    margin-bottom: 2rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin: 2rem 0 2.5rem;
+}
+
+.project-card {
+    background: linear-gradient(160deg, var(--card-background) 0%, var(--light-background) 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 1.25rem;
+    box-shadow: var(--shadow);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--hover-shadow);
+}
+
+.project-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+    align-items: flex-start;
+    margin-bottom: 0.8rem;
+}
+
+.project-year {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: white;
+    background: var(--primary-color);
+    padding: 0.3rem 0.6rem;
+    border-radius: 999px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    justify-content: flex-end;
+}
+
+.project-tag {
+    font-size: 0.72rem;
+    color: var(--text-color);
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    padding: 0.2rem 0.5rem;
+    border-radius: 999px;
+}
+
+.project-title {
+    margin: 0.1rem 0 0.5rem;
+    line-height: 1.35;
+}
+
+.project-subtitle {
+    margin: 0 0 0.75rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.project-description {
+    margin: 0;
+    color: var(--text-color);
+    line-height: 1.55;
+}
+
+.project-links {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.project-link-btn {
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    background: var(--secondary-color);
+    border-radius: 8px;
+    padding: 0.45rem 0.7rem;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.project-link-btn:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
+}
+
+.project-details {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.prose h2,
+.prose h3,
+.prose h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.6rem;
+}
+
+.prose p,
+.prose li {
+    line-height: 1.65;
+}
+
+.prose ul {
+    padding-left: 1.2rem;
+}
+
+.prose code {
+    background: var(--light-background);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 0.1rem 0.35rem;
+}
+
+.prose pre {
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 10px;
+    padding: 0.9rem;
+    overflow-x: auto;
+}
+
+.prose pre code {
+    background: transparent;
+    border: none;
+    padding: 0;
+    color: #e2e8f0;
+}
+
+.prose img {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    margin: 0.5rem 0 1rem;
+}
+
+@media (max-width: 768px) {
+    .project-details {
+        padding: 1rem;
+    }
+}
+</style>
+{% endblock content %}

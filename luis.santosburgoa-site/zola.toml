@@ -1,0 +1,61 @@
+base_url = "https://suchomlinow.github.io"
+compile_sass = true
+build_search_index = true
+theme = "peritus"
+
+title = "Luis Emilio Santos Burgoa"
+description = "MS student in Computational Analysis & Public Policy at the University of Chicago"
+default_language = "en"
+
+[markdown]
+
+[markdown.highlighting]
+theme = "catppuccin-mocha"
+
+[extra]
+cv_url = "/LuisEmilioSantosBurgoa_CV_Eng.pdf"
+name = "Luis Emilio Santos Burgoa"
+role = "MS Candidate, Computational Analysis & Public Policy"
+organization = "University of Chicago"
+location = "Chicago, Illinois"
+enable_dark_mode = true
+
+bio = """
+I am currently pursuing an M.S. in Computational Analysis and Public Policy at the Harris School of Public Policy at the University of Chicago. I hold a B.A. in Industrial Engineering from ITAM in Mexico, and I have more than five years of experience working in the Economic Research Department at the Bank of Mexico as a Specialty Leader Analyst.
+
+I am interested in Institutions that make a tangible impact on people's lives. I am a firm believer in the efficacy of local solutions to impact global scales. Let´s connect!
+"""
+
+[[extra.menu]]
+name = "Publications"
+url = "/publications/"
+weight = 1
+
+[[extra.menu]]
+name = "Conferences & Talks"
+url = "/conferences/"
+weight = 2
+
+[[extra.menu]]
+name = "Experience"
+url = "/experience/"
+weight = 3
+
+[[extra.menu]]
+name = "Selected Projects"
+url = "/projects/"
+weight = 4
+
+[extra.colors]
+primary_color = "#1E3A5F"
+secondary_color = "#A11D33"
+accent_color = "#3E6B8A"
+text_color = "#1F2933"
+background_color = "#F7FAFC"
+card_background = "#FFFFFF"
+border_color = "#D9E2EC"
+light_background = "#EDF2F7"
+dark_text_color = "#E5E7EB"
+dark_background_color = "#0F172A"
+dark_card_background = "#111827"
+dark_border_color = "#334155"
