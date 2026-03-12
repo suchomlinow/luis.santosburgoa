@@ -35,9 +35,34 @@ jobs:
         working-directory: ./luis.santosburgoa-site
 
       - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./luis.santosburgoa-site/public
-          publish_branch: gh-pages
-          force_orphan: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euxo pipefail
+          REPO_URL="https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git"
+          TARGET_DIR="/tmp/gh-pages-${{ github.run_id }}"
+
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if git ls-remote --exit-code --heads "${REPO_URL}" gh-pages; then
+            git clone --depth 1 --branch gh-pages "${REPO_URL}" "${TARGET_DIR}"
+          else
+            git clone --depth 1 "${REPO_URL}" "${TARGET_DIR}"
+            cd "${TARGET_DIR}"
+            git checkout --orphan gh-pages
+            git rm -rf . || true
+            cd -
+          fi
+
+          rsync -av --delete ./luis.santosburgoa-site/public/ "${TARGET_DIR}/"
+          touch "${TARGET_DIR}/.nojekyll"
+
+          cd "${TARGET_DIR}"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to deploy."
+            exit 0
+          fi
+          git commit -m "Deploy site from ${GITHUB_SHA}"
+          git push origin gh-pages
