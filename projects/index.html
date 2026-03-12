@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Luis Emilio Santos Burgoa</title>
+    <meta name="description" content="Projects in data, policy, and analytics">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://suchomlinow.github.io/luis.santosburgoa/style.css">
+    
+    <!-- Dynamic color configuration from config.toml -->
+    
+    <style>
+        :root {
+            --primary-color: #1E3A5F;
+            --secondary-color: #A11D33;
+            --accent-color: #3E6B8A;
+            --text-color: #1F2933;
+            --background-color: #F7FAFC;
+            --card-background: #FFFFFF;
+            --border-color: #D9E2EC;
+            --light-background: #EDF2F7;
+        }
+        
+        .dark-mode {
+            --text-color: #E5E7EB;
+            --background-color: #0F172A;
+            --card-background: #111827;
+            --border-color: #334155;
+        }
+        
+        /* Footer link styling */
+        .footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+    </style>
+    
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://suchomlinow.github.io/luis.santosburgoa/favicon.ico">
+    
+    
+    <script>
+        // Dark mode toggle
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', document.documentElement.classList.contains('dark-mode'));
+        }
+        
+        // Load dark mode preference
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Mobile menu button -->
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <!-- Navigation links -->
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="https://suchomlinow.github.io/luis.santosburgoa" class="nav-link"><i class="fas fa-home"></i></a>
+                </li>
+                
+                    
+                    <li class="nav-item">
+                        <a href="https://suchomlinow.github.io/luis.santosburgoa/publications" class="nav-link">Publications</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="https://suchomlinow.github.io/luis.santosburgoa/conferences" class="nav-link">Conferences &amp; Talks</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="https://suchomlinow.github.io/luis.santosburgoa/experience" class="nav-link">Experience</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="https://suchomlinow.github.io/luis.santosburgoa/projects" class="nav-link">Selected Projects</a>
+                    </li>
+                    
+                
+                
+                
+                <li class="nav-item">
+                    <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <main class="main-content">
+        
+<div class="section-template">
+    <div class="container">
+        <div class="section-header projects-header">
+            <h1>Selected Projects</h1>
+            
+            <p>Projects in data, policy, and analytics</p>
+            
+        </div>
+
+        
+
+        <div class="projects-grid">
+            
+            <article class="project-card">
+                <div class="project-top">
+                    <div class="project-year">2026</div>
+                    
+                    <div class="project-tags">
+                        
+                        <span class="project-tag">Transportation</span>
+                        
+                        <span class="project-tag">Policy Analytics</span>
+                        
+                        <span class="project-tag">Dash</span>
+                        
+                        <span class="project-tag">Plotly</span>
+                        
+                        <span class="project-tag">Chicago</span>
+                        
+                    </div>
+                    
+                </div>
+
+                <h3 class="project-title">Bus vs. Rideshare: What&#x27;s the Best Way for the UChicago Community to Get Downtown?</h3>
+                
+                <p class="project-subtitle">Comparative analysis of CTA bus routes 2 and 6 versus Uber&#x2F;Lyft between Hyde Park and Downtown Chicago</p>
+                
+
+                
+                <p class="project-description">Interactive transportation dashboard analyzing travel time reliability, variability, shocks, and cost-time tradeoffs for bus and rideshare options.</p>
+                
+
+                
+                <footer class="project-links">
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;uchicago-2026-capp30122&#x2F;project-ljs" class="project-link-btn" target="_blank" rel="noopener noreferrer">Repository ↗</a>
+                    
+                </footer>
+                
+            </article>
+            
+        </div>
+
+        
+        <article class="project-details prose">
+            <h2 id="bus-vs-rideshare-what-s-the-best-way-for-the-uchicago-community-to-get-downtown">Bus vs. Rideshare: What's the Best Way for the UChicago Community to Get Downtown?</h2>
+<h3 id="team-members">Team members</h3>
+<ul>
+<li>Brenda Jocelyn Sanchez Mendoza</li>
+<li>Seiya Matsumoto</li>
+<li>Luis Emilio Santos Burgoa Suchomlinow</li>
+</ul>
+<h3 id="abstract">Abstract</h3>
+<p>This project provides practical insights into the factors shaping transportation choices among the University of Chicago community traveling between Hyde Park and Downtown Chicago. We compare the two primary CTA bus routes serving this corridor (routes <strong>2</strong> and <strong>6</strong>) with rideshare options (Uber and Lyft), focusing on travel time and cost.</p>
+<p>Using historical trip-level data, we examine average performance, travel time variability, unusual daily shocks, and the tradeoff between time saved and additional cost. These results are presented in an interactive dashboard built with Plotly Dash, designed to help users better understand the reliability and efficiency of each transportation option.</p>
+
+        </article>
+        
+    </div>
+</div>
+
+<style>
+.projects-header {
+    margin-bottom: 2rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin: 2rem 0 2.5rem;
+}
+
+.project-card {
+    background: linear-gradient(160deg, var(--card-background) 0%, var(--light-background) 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 1.25rem;
+    box-shadow: var(--shadow);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--hover-shadow);
+}
+
+.project-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+    align-items: flex-start;
+    margin-bottom: 0.8rem;
+}
+
+.project-year {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: white;
+    background: var(--primary-color);
+    padding: 0.3rem 0.6rem;
+    border-radius: 999px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    justify-content: flex-end;
+}
+
+.project-tag {
+    font-size: 0.72rem;
+    color: var(--text-color);
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    padding: 0.2rem 0.5rem;
+    border-radius: 999px;
+}
+
+.project-title {
+    margin: 0.1rem 0 0.5rem;
+    line-height: 1.35;
+}
+
+.project-subtitle {
+    margin: 0 0 0.75rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.project-description {
+    margin: 0;
+    color: var(--text-color);
+    line-height: 1.55;
+}
+
+.project-links {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.project-link-btn {
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    background: var(--secondary-color);
+    border-radius: 8px;
+    padding: 0.45rem 0.7rem;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.project-link-btn:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
+}
+
+.project-details {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.prose h2,
+.prose h3,
+.prose h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.6rem;
+}
+
+.prose p,
+.prose li {
+    line-height: 1.65;
+}
+
+.prose ul {
+    padding-left: 1.2rem;
+}
+
+.prose code {
+    background: var(--light-background);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 0.1rem 0.35rem;
+}
+
+.prose pre {
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 10px;
+    padding: 0.9rem;
+    overflow-x: auto;
+}
+
+.prose pre code {
+    background: transparent;
+    border: none;
+    padding: 0;
+    color: #e2e8f0;
+}
+
+.prose img {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    margin: 0.5rem 0 1rem;
+}
+
+@media (max-width: 768px) {
+    .project-details {
+        padding: 1rem;
+    }
+}
+</style>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p style="font-size: 0.8em;">&copy; 2026 Luis Emilio Santos Burgoa. <br> Built with <a href="https://www.getzola.org/">Zola</a> using the <a href="https://github.com/jskaza/peritus"><strong>peritus</strong></a> theme by <a href="https://jskaza.github.io/">Jonathan Skaza</a>.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+        
+        mobileMenu.addEventListener('click', function() {
+            mobileMenu.classList.toggle('is-active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            mobileMenu.classList.remove('is-active');
+            navMenu.classList.remove('active');
+        }));
+    </script>
+</body>
+</html> 
