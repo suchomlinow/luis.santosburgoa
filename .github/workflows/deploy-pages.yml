@@ -17,14 +17,12 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: luis.santosburgoa-site
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Pages
+        id: pages
         uses: actions/configure-pages@v5
 
       - name: Install Zola
@@ -33,7 +31,8 @@ jobs:
           tool: zola@0.20.0
 
       - name: Build site
-        run: zola build
+        run: zola build --base-url "${{ steps.pages.outputs.base_url }}"
+        working-directory: luis.santosburgoa-site
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
