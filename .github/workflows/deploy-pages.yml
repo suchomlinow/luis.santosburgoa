@@ -56,7 +56,7 @@ jobs:
             cd -
           fi
 
-          rsync -av --delete ./luis.santosburgoa-site/public/ "${TARGET_DIR}/"
+          rsync -av --delete --exclude '.git' ./luis.santosburgoa-site/public/ "${TARGET_DIR}/"
           touch "${TARGET_DIR}/.nojekyll"
 
           cd "${TARGET_DIR}"
