@@ -5,7 +5,7 @@ author = ["Luis Emilio Santos Burgoa"]
 venue = "Deutsche Bundesbank"
 description = "September 2024"
 links = [
-  { name = "Slides", url = "Swift-shifts-in-central-banking-AI-ML-LESB.pdf" }
+  { name = "Slides", url = "../Swift-shifts-in-central-banking-AI-ML-LESB.pdf" }
 ]
 
 [[conference]]
