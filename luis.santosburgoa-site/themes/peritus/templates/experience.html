@@ -18,7 +18,7 @@
             {% endif %}
             
             <div class="experience-timeline">
-                {% for exp in experience_data.experience | sort(attribute="start_date") | reverse %}
+                {% for exp in experience_data.experience | sort(attribute="end_date") | reverse %}
                 <article class="experience-item">
                     <div class="experience-timeline-marker">
                         <div class="timeline-dot"></div>
