@@ -1,32 +1,40 @@
 [[experience]]
-title = "Information and Business Specialist"
-company = "Banco de México - Economic Research General Directorate"
+title = "Research Assistant to Prof. Erin Kelley"
+company = "University of Chicago"
+location = "Chicago, IL / Remote"
+start_date = "2025"
+end_date = "Present"
+description = "At the University of Chicago, I support research on labor markets, entrepreneurship, and occupational choice in the Dominican Republic. As part of this project, I have helped clean and organize pilot survey data and built reproducible Python workflows to produce descriptive tables, figures, and summary statistics."
+
+[[experience]]
+title = "Specialty Leader / Information and Business Analyst"
+company = "Banco de México - Directorate General of Economic Research"
 location = "Mexico City, Mexico"
-start_date = 2019
-end_date = 2025
-description = "At the Bank of Mexico, I provided essential support to senior economists and the Governing Board by overseeing research workflows for the Quarterly Inflation Report and the Regional Economic Report. These publications serve as the basis for monetary policy decisions. One of the most significant projects I managed was the modernization of our editorial and analytics processes for our published reports. I coordinated the input of over 100 researchers, streamlined data review processes, and crafted a comprehensive guide to ensure consistent publication standards and data integrity. I also coordinated and was named the main liaison between the Economic Research Department and other departments within the bank for legal, transparency, compliance, and non-financial risk exposure strategies."
+start_date = "2019"
+end_date = "2025"
+description = "At the Bank of Mexico, I worked in the Directorate General of Economic Research, where I supported the preparation and publication of the Bank's flagship economic reports, including the Quarterly Inflation Report and the Regional Economic Report. My work focused on coordinating research and publication workflows, ensuring that text, tables, figures, charts, and maps were accurate, consistent, and ready for publication. I also helped modernize editorial and data-review processes by streamlining workflows, coordinating inputs from more than 100 researchers, and developing guidelines to improve consistency across reports. In addition, I served as the main liaison between the Directorate General of Economic Research and other areas of the Bank on legal, transparency, compliance, internal audit, and non-financial risk matters."
 
 [[experience]]
 title = "Intern"
-company = "Banco de México - Non-Financial Risks and Compliance General Directorate"
+company = "Banco de México - Compliance and Process Monitoring Office"
 location = "Mexico City, Mexico"
-start_date = 2019
-end_date = 2019
-description = "I provided support to the compliance office and monitoring of records for relevant control activities and critical processes for the Bank."
+start_date = "2019"
+end_date = "2019"
+description = "As an intern at the Bank of Mexico, I supported compliance monitoring activities by reviewing records and documentation related to key internal controls and critical institutional processes. This experience gave me an early understanding of how public institutions manage compliance, operational risks, and internal control systems."
 
 
 [[experience]]
 title = "Program Coordinator"
-company = "Accion Comunitaria por la Colonia Tizapan (ACCT) NGO - Mexico"
+company = "Acción Comunitaria por la Colonia Tizapán (ACCT)"
 location = "Mexico City, Mexico"
-start_date = 2017
-end_date = 2018
-description = "As part of the International Students Association at ITAM in Mexico, we set up an NGO. We ran remedial classes on Saturday mornings to help students prepare for a crucial high school admissions exam. I was responsible for designing the study plan and hiring teachers."
+start_date = "2017"
+end_date = "2018"
+description = "At ITAM, I was part of a student-led initiative that created a community education program for students in Tizapán. Every Saturday morning, we offered remedial classes to help students prepare for a competitive high school admissions exam. I served as Program Coordinator, designing the study plan, recruiting teachers, and helping organize the program's academic structure. This was one of my first experiences connecting education, community service, and public impact."
 
 [[experience]]
 title = "Junior Exam Officer"
 company = "Rye School of English"
-location = "Leon, Mexico"
-start_date = 2013
-end_date = 2015
-description = "I managed Cambridge University international qualifications, logistics, and institutional relationships for regional venues."
+location = "León, Mexico"
+start_date = "2013"
+end_date = "2015"
+description = "At Rye School of English, I supported the administration of Cambridge English international qualifications across regional exam venues. My work involved coordinating exam logistics, preparing materials, communicating with participating institutions, and helping ensure that exam sessions followed the required procedures."

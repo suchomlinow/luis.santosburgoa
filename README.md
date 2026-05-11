@@ -7,7 +7,7 @@ My work sits at the intersection of data, policy, economics and communication: n
 
 I started in Industrial Engineering at ITAM, in Mexico where I learned to think in systems: how processes break, how decisions scale, and how small design choices create big outcomes.
 
-At Banco de Mexico, I worked on the information and process coordinarion side of economic research, supporting flagship publications like the Quarterly Inflation Report and the Regional Economic Report.
+At Banco de Mexico, I worked in the Directorate General of Economic Research, supporting flagship publications like the Quarterly Inflation Report and the Regional Economic Report while coordinating research and publication workflows.
 
 Now at UChicago, I am expanding that foundation with data, and policy analytics tools to tackle public-interest problems that I am interested
 
