@@ -11,15 +11,8 @@
             <!-- Bio section -->
             <div class="bio-section">
                 {% set profile_image = config.extra.profile_image | default(value="") %}
-                <div class="nameplate">
-                    <div class="name-copy">
-                        <h1 class="name">{{ config.extra.name | default(value=config.title) }}</h1>
-                        <h2 class="role">{{ config.extra.role }}</h2>
-                        {% if config.extra.organization %}
-                        <p class="organization">{{ config.extra.organization }}</p>
-                        {% endif %}
-                    </div>
-
+                <div class="headline-row">
+                    <h1 class="name">{{ config.extra.name | default(value=config.title) }}</h1>
                     <div class="profile-photo-wrapper">
                         {% if profile_image != "" %}
                         <img src="{{ get_url(path=profile_image) }}" alt="Portrait of {{ config.extra.name | default(value=config.title) }}" class="profile-photo">
@@ -31,6 +24,10 @@
                         {% endif %}
                     </div>
                 </div>
+                <h2 class="role">{{ config.extra.role }}</h2>
+                {% if config.extra.organization %}
+                <p class="organization">{{ config.extra.organization }}</p>
+                {% endif %}
                 
                 {% if config.extra.bio %}
                 <div class="bio">

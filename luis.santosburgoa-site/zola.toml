@@ -15,7 +15,7 @@ theme = "catppuccin-mocha"
 [extra]
 cv_url = "LuisEmilioSantosBurgoa_CV_Eng.pdf"
 name = "Luis Emilio Santos Burgoa"
-profile_image = "profile-photo.jpeg"
+profile_image = "profile-headshot.jpeg"
 role = "MS Candidate, Computational Analysis & Public Policy"
 organization = "University of Chicago"
 location = "Chicago, Illinois"
