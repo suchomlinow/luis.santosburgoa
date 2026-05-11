@@ -8,18 +8,29 @@
 <div class="hero-section">
     <div class="container">
         <div class="hero-content">
-            <!-- Avatar section -->
-            <!-- <div class="avatar-section">
-                <img src="{{ get_url(path="avatar.jpg") }}" alt="{{ config.extra.name }}" class="avatar">
-            </div> -->
-            
             <!-- Bio section -->
             <div class="bio-section">
-                <h1 class="name">{{ config.extra.name | default(value=config.title) }}</h1>
-                <h2 class="role">{{ config.extra.role }}</h2>
-                {% if config.extra.organization %}
-                <p class="organization">{{ config.extra.organization }}</p>
-                {% endif %}
+                {% set profile_image = config.extra.profile_image | default(value="") %}
+                <div class="nameplate">
+                    <div class="name-copy">
+                        <h1 class="name">{{ config.extra.name | default(value=config.title) }}</h1>
+                        <h2 class="role">{{ config.extra.role }}</h2>
+                        {% if config.extra.organization %}
+                        <p class="organization">{{ config.extra.organization }}</p>
+                        {% endif %}
+                    </div>
+
+                    <div class="profile-photo-wrapper">
+                        {% if profile_image != "" %}
+                        <img src="{{ get_url(path=profile_image) }}" alt="Portrait of {{ config.extra.name | default(value=config.title) }}" class="profile-photo">
+                        {% else %}
+                        <div class="profile-photo profile-photo-placeholder" aria-label="Photo placeholder for {{ config.extra.name | default(value=config.title) }}">
+                            <i class="fas fa-camera"></i>
+                            <span>Photo coming soon</span>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
                 
                 {% if config.extra.bio %}
                 <div class="bio">
