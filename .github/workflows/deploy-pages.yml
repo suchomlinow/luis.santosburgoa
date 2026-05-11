@@ -19,6 +19,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install LaTeX tools
+        run: |
+          set -euxo pipefail
+          sudo apt-get update
+          sudo apt-get install -y latexmk texlive-latex-base texlive-latex-extra texlive-fonts-recommended
+
+      - name: Sync CV from resume repository
+        env:
+          RESUME_REPO_URL: https://github.com/suchomlinow/resume-lesb.git
+          RESUME_REPO_TOKEN: ${{ secrets.RESUME_REPO_TOKEN }}
+          RESUME_SOURCE_TEX: resume_eng.tex
+          SITE_CV_FILENAME: LuisEmilioSantosBurgoa_CV_Eng.pdf
+        run: ./scripts/sync_resume.sh
+
       - name: Install Zola
         run: |
           set -euxo pipefail

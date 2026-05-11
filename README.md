@@ -34,3 +34,15 @@ I am always open to collaborating on projects where data, economics, and policy 
 - Email: [lsantosb@uchicago.edu](mailto:lsantosb@uchicago.edu)
 - LinkedIn: [luis-santos-burgoa](https://www.linkedin.com/in/luis-santos-burgoa/)
 - GitHub: [suchomlinow](https://github.com/suchomlinow)
+
+## CV sync
+
+The site CV at `luis.santosburgoa-site/static/LuisEmilioSantosBurgoa_CV_Eng.pdf` can be refreshed from `resume-lesb`.
+
+For a local sync:
+
+```bash
+./scripts/sync_resume.sh
+```
+
+The GitHub Pages workflow also runs this sync on every deploy. If `resume-lesb` is private, add a `RESUME_REPO_TOKEN` secret in this repository with read access to that repo.
