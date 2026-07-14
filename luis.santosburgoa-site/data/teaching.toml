@@ -1,0 +1,35 @@
+[[teaching]]
+title = "Graduate Lecturer"
+institution = "University of Chicago"
+course = "PPHA 30110: Coding Lab for Public Policy"
+school = "Harris School of Public Policy"
+term = "Fall 2026"
+location = "Chicago, IL"
+# syllabus_url = "/syllabi/ppha-30110.pdf"
+
+[[teaching]]
+title = "Graduate Teaching Assistant"
+institution = "University of Chicago"
+course = "CAPP 30121: Computer Science with Applications I"
+school = "Department of Computer Science"
+term = "Fall 2026"
+location = "Chicago, IL"
+# syllabus_url = "/syllabi/capp-30121.pdf"
+
+[[teaching]]
+title = "Graduate Lecturer"
+institution = "University of Chicago"
+course = "Harris Coding Camp"
+school = "Harris School of Public Policy"
+term = "Summer 2026"
+location = "Chicago, IL"
+# syllabus_url = "/syllabi/harris-coding-camp.pdf"
+
+[[teaching]]
+title = "Graduate Teaching Assistant"
+institution = "University of Chicago"
+course = "CAPP Camp"
+school = "Department of Computer Science"
+term = "Summer 2026"
+location = "Chicago, IL"
+# syllabus_url = "/syllabi/capp-camp.pdf"

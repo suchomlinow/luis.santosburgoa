@@ -1,0 +1,239 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="section-template">
+    <div class="container">
+        <div class="section-header teaching-header">
+            <h1>{{ section.title }}</h1>
+            {% if section.description %}
+            <p>{{ section.description }}</p>
+            {% endif %}
+        </div>
+
+        {% set teaching_data = load_data(path="data/teaching.toml") %}
+
+        <div class="teaching-timeline">
+            {% for role in teaching_data.teaching %}
+            <article class="teaching-item">
+                <div class="teaching-timeline-marker" aria-hidden="true">
+                    <div class="teaching-timeline-dot"></div>
+                    {% if not loop.last %}
+                    <div class="teaching-timeline-line"></div>
+                    {% endif %}
+                </div>
+
+                <div class="teaching-content">
+                    <header class="teaching-role-header">
+                        <div class="teaching-heading-row">
+                            <div>
+                                <h2 class="teaching-course-title">{{ role.course }}</h2>
+                                <p class="teaching-role-title">{{ role.title }}</p>
+                            </div>
+                            <span class="teaching-term">{{ role.term }}</span>
+                        </div>
+
+                        <div class="teaching-meta">
+                            <span>
+                                <i class="fas fa-building-columns" aria-hidden="true"></i>
+                                {{ role.institution }}
+                            </span>
+                            <span>{{ role.school }}</span>
+                            <span>
+                                <i class="fas fa-location-dot" aria-hidden="true"></i>
+                                {{ role.location }}
+                            </span>
+                        </div>
+                    </header>
+
+                    {% if role.syllabus_url %}
+                    <a href="{{ role.syllabus_url }}" class="teaching-syllabus-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-file-lines" aria-hidden="true"></i>
+                        View syllabus
+                    </a>
+                    {% endif %}
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+
+        {% if section.content %}
+        <div class="teaching-details">
+            {{ section.content | safe }}
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<style>
+.teaching-header {
+    margin-bottom: 2rem;
+}
+
+.teaching-timeline {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.teaching-item {
+    display: flex;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.teaching-item:last-child {
+    margin-bottom: 0;
+}
+
+.teaching-timeline-marker {
+    position: relative;
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.teaching-timeline-dot {
+    width: 16px;
+    height: 16px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    border: 3px solid var(--background-color);
+    box-shadow: 0 0 0 3px var(--primary-color);
+    z-index: 2;
+}
+
+.teaching-timeline-line {
+    width: 2px;
+    flex: 1;
+    min-height: 100px;
+    margin-top: 1rem;
+    background-color: var(--border-color);
+}
+
+.teaching-content {
+    flex: 1;
+    min-width: 0;
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.6rem 1.8rem;
+    box-shadow: var(--shadow);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.teaching-content:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--hover-shadow);
+}
+
+.teaching-role-header {
+    margin: 0;
+}
+
+.teaching-heading-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.25rem;
+}
+
+.teaching-course-title {
+    margin: 0 0 0.35rem;
+    color: var(--text-color);
+    font-size: 1.35rem;
+    line-height: 1.35;
+}
+
+.teaching-role-title {
+    margin: 0;
+    color: var(--secondary-color);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.teaching-term {
+    display: inline-flex;
+    flex-shrink: 0;
+    color: #fff;
+    background: var(--primary-color);
+    border-radius: 999px;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.teaching-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem 0.75rem;
+    margin-top: 1rem;
+    color: var(--text-color);
+    font-size: 0.88rem;
+}
+
+.teaching-meta span:not(:last-child)::after {
+    content: "\2022";
+    margin-left: 0.75rem;
+    color: var(--secondary-color);
+}
+
+.teaching-meta i {
+    margin-right: 0.25rem;
+    color: var(--secondary-color);
+}
+
+.teaching-syllabus-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-top: 1.2rem;
+    color: #fff;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.teaching-syllabus-link:hover {
+    color: #fff;
+    background-color: var(--primary-color);
+    transform: translateY(-1px);
+}
+
+.teaching-details {
+    max-width: 1000px;
+    margin: 2rem auto 0;
+}
+
+@media (max-width: 768px) {
+    .teaching-timeline-marker {
+        margin-right: 1.1rem;
+    }
+
+    .teaching-content {
+        padding: 1.2rem;
+    }
+
+    .teaching-heading-row {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .teaching-course-title {
+        font-size: 1.2rem;
+    }
+
+    .teaching-meta {
+        flex-direction: column;
+        gap: 0.45rem;
+    }
+
+    .teaching-meta span:not(:last-child)::after {
+        content: none;
+    }
+}
+</style>
+{% endblock content %}

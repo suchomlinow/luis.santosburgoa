@@ -18,34 +18,55 @@ name = "Luis Emilio Santos Burgoa"
 profile_image = "profile-headshot.jpeg"
 role = "MS Candidate, Computational Analysis & Public Policy"
 organization = "University of Chicago"
+secondary_role = "Policy Research Fellow"
+secondary_organization = "City of Chicago"
 location = "Chicago, Illinois"
 enable_dark_mode = true
 
 bio = """
-I am currently pursuing an M.S. in Computational Analysis and Public Policy at the Harris School of Public Policy at the University of Chicago. I hold a B.A. in Industrial Engineering from ITAM in Mexico, and I have more than five years of experience in the Directorate General of Economic Research at the Bank of Mexico, where I worked as a Specialty Leader and Information and Business Analyst.
+I'm an M.S. candidate in Computational Analysis and Public Policy at the Harris School of Public Policy at the University of Chicago. I currently work as a Policy Research Fellow in the City of Chicago Mayor's Office, where I support research on municipal finance and tax policy. At the University of Chicago, I also teach coding at the Harris School of Public Policy and the Department of Computer Science.
 
-I am interested in Institutions that make a tangible impact on people's lives. I am a firm believer in the efficacy of local solutions to impact global scales. Let´s connect!
+Before coming to Chicago, I spent more than five years in the Directorate General of Economic Research at the Bank of Mexico, where I worked as a Specialty Leader and Information and Business Analyst. I hold a bachelor's degree in Industrial Engineering from ITAM in Mexico.
+
+My work sits at the intersection of data, public policy, economics, and clear communication. I am especially interested in how strong public institutions and locally grounded solutions can improve people's lives.
 """
 
-[[extra.menu]]
-name = "Publications"
-url = "/publications/"
-weight = 1
+[[extra.current_work]]
+title = "Municipal finance and tax policy"
+description = "Evaluating municipal tax proposals for the City of Chicago to help address the city's fiscal deficit."
 
-[[extra.menu]]
-name = "Conferences & Talks"
-url = "/conferences/"
-weight = 2
+[[extra.current_work]]
+title = "Entrepreneurship training"
+description = "Supporting a randomized controlled trial in the Dominican Republic with the World Bank that studies how entrepreneurship training affects participants' economic opportunities and outcomes."
+
+[[extra.current_work]]
+title = "Central bank communication"
+description = "Researching the communication channels and mechanisms used by the Bank of Mexico to make monetary policy and economic information clearer and more accessible."
 
 [[extra.menu]]
 name = "Experience"
 url = "/experience/"
-weight = 3
+weight = 1
+
+[[extra.menu]]
+name = "Teaching"
+url = "/teaching/"
+weight = 2
 
 [[extra.menu]]
 name = "Selected Projects"
 url = "/projects/"
+weight = 3
+
+[[extra.menu]]
+name = "Publications"
+url = "/publications/"
 weight = 4
+
+[[extra.menu]]
+name = "Conferences & Talks"
+url = "/conferences/"
+weight = 5
 
 [extra.colors]
 primary_color = "#1E3A5F"

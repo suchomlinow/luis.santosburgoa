@@ -24,16 +24,43 @@
                         {% endif %}
                     </div>
                 </div>
-                <h2 class="role">{{ config.extra.role }}</h2>
-                {% if config.extra.organization %}
-                <p class="organization">{{ config.extra.organization }}</p>
-                {% endif %}
+                <div class="role-affiliations">
+                    <div class="role-affiliation">
+                        <h2 class="role">{{ config.extra.role }}</h2>
+                        {% if config.extra.organization %}
+                        <p class="organization">{{ config.extra.organization }}</p>
+                        {% endif %}
+                    </div>
+
+                    {% if config.extra.secondary_role %}
+                    <div class="role-affiliation">
+                        <h2 class="role">{{ config.extra.secondary_role }}</h2>
+                        {% if config.extra.secondary_organization %}
+                        <p class="organization">{{ config.extra.secondary_organization }}</p>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+                </div>
                 
                 {% if config.extra.bio %}
                 <div class="bio">
                     <h3>About Me</h3>
                     <div>{{ config.extra.bio | markdown(inline=false) | safe }}</div>
                 </div>
+                {% endif %}
+
+                {% if config.extra.current_work %}
+                <section class="current-work-section" aria-labelledby="current-work-heading">
+                    <h3 id="current-work-heading">What I'm Working On</h3>
+                    <ul class="current-work-list">
+                        {% for item in config.extra.current_work %}
+                        <li class="current-work-item">
+                            <h4>{{ item.title }}</h4>
+                            <p>{{ item.description }}</p>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </section>
                 {% endif %}
                 
                 <!-- Download CV button -->
